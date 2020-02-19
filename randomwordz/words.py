@@ -7,7 +7,7 @@ except ImportError:
     # Try backported to PY<37 `importlib_resources`.
     import importlib_resources as pkg_resources
 
-import randomwordz.data as data
+from . import data
 from random import choice as randchoice
 from random import shuffle
 
