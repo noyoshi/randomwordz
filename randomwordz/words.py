@@ -7,7 +7,6 @@ except ImportError:
     # Try backported to PY<37 `importlib_resources`.
     import importlib_resources as pkg_resources
 
-from . import data
 from random import choice as randchoice
 from random import shuffle
 
@@ -25,7 +24,7 @@ class WordGenerator:
     def _load(self):
         for name in self.codes:
             self.data[name] = pkg_resources.read_text(
-                data,
+                "randomwordz.data",
                 f"{name}.txt"
             ).split('\n')
 
